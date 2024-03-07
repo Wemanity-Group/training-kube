@@ -1,0 +1,16 @@
+version: '3'
+services:
+  backend:
+    container_name: backend
+    build:
+      context: ./backend-app
+    image: backend
+    ports:
+      - "80:80"
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend-app
+    image: frontend
+    ports:
+      - "3000:80"
