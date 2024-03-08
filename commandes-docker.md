@@ -52,8 +52,9 @@ WORKDIR /app
 
 RUN go mod init go-backend
 
-COPY main.go go.mod /app/
+COPY main.go /app/
 
+RUN go get github.com/gorilla/mux
 RUN go mod download github.com/gorilla/mux
 RUN go get github.com/gorilla/handlers
 
@@ -147,7 +148,6 @@ open http://localhost/hello
 Setup :
 
 ```
-mkdir frontend-app/
 cd frontend-app/
 ```
 
