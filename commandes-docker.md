@@ -1,10 +1,5 @@
 # Commandes à jouer pour Docker et Docker Compose
 
-Les prérequis :
-- avoir installé Go,
-- avoir installé NodeJS,
-- avoir installé ReactJS.
-
 ## Création de l'image Docker Backend
 
 Setup :
@@ -14,27 +9,27 @@ mkdir backend-app/
 cd backend-app/
 ```
 
-Création d’un module Go :
+Pour information, pour créer un module Go :
 
 ```
 go mod init go-backend
 ```
 
-Le fichier go.mod est créé.
+Le fichier go.mod est alors créé.
 
-Pour activer CORS, on va avoir besoin du package github.com/gorilla/mux :
+Et pour activer CORS, on va avoir besoin du package github.com/gorilla/mux :
 
 ```
 go get github.com/gorilla/mux
 ```
 
-Le fichier go.sum est créé et le fichier go.mod est modifié. Ils référencent le module github.com/gorilla/mux.
+Le fichier go.sum est alors créé et le fichier go.mod est modifié. Ils référencent le module github.com/gorilla/mux.
 
 ```
 go mod download github.com/gorilla/mux
 ```
 
-Créer le fichier main.go avec le contenu fourni :
+Maintenant, créez le fichier main.go avec le contenu fourni :
 
 ```
 package main
