@@ -145,12 +145,6 @@ open http://localhost/hello
 
 ## Création de l'image Docker Frontend
 
-Setup :
-
-```
-cd frontend-app/
-```
-
 Créer un projet ReactJS :
 
 ```
