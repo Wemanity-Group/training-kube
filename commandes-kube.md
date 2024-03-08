@@ -108,7 +108,7 @@ apt install curl
 Vérifier un service :
 
 ```
-kubectl get svc frontend-service
+kubectl get svc frontend
 curl http://10.111.115.156:80
 curl http://<url-de-l-ingress>
 kubectl logs <nom-du-pod>
