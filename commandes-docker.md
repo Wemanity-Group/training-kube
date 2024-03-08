@@ -9,27 +9,7 @@ mkdir backend-app/
 cd backend-app/
 ```
 
-Pour information, pour créer un module Go :
-
-```
-go mod init go-backend
-```
-
-Le fichier go.mod est alors créé.
-
-Et pour activer CORS, on va avoir besoin du package github.com/gorilla/mux :
-
-```
-go get github.com/gorilla/mux
-```
-
-Le fichier go.sum est alors créé et le fichier go.mod est modifié. Ils référencent le module github.com/gorilla/mux.
-
-```
-go mod download github.com/gorilla/mux
-```
-
-Maintenant, créez le fichier main.go avec le contenu fourni :
+Créez le fichier main.go avec le contenu fourni :
 
 ```
 package main
@@ -86,7 +66,29 @@ EXPOSE 80
 CMD ["hello-app"]
 ```
 
-Build de l’image Docker :
+Quelques explications :
+
+- Dans le fichier `Dockerfile`, on crée un module Go :
+
+```
+go mod init go-backend
+```
+
+Le fichier go.mod est alors créé.
+
+- Puis on active CORS. Pour cela, on a besoin du package github.com/gorilla/mux :
+
+```
+go get github.com/gorilla/mux
+```
+
+Le fichier go.sum est alors créé et le fichier go.mod est modifié. Ils référencent le module github.com/gorilla/mux.
+
+```
+go mod download github.com/gorilla/mux
+```
+
+Builder l’image Docker :
 
 ```
 docker build -t backend .
