@@ -50,6 +50,8 @@ FROM golang:1.16 AS build
 
 WORKDIR /app
 
+RUN go mod init go-backend
+
 COPY main.go go.mod /app/
 
 RUN go mod download github.com/gorilla/mux
@@ -87,6 +89,8 @@ Le fichier go.sum est alors créé et le fichier go.mod est modifié. Ils réfé
 ```
 go mod download github.com/gorilla/mux
 ```
+
+Remaque : Dans al vraie vie, on crée la structure du projet en local en dehors du Dockerfile avec la commande `go mod init go-backend`. Mais pour éviter d'installer Go en local, cette commande est exécutée dans le `Dockerfile`.
 
 Builder l’image Docker :
 
