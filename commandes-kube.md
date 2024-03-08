@@ -24,6 +24,12 @@ Télécharger Docker Desktop : https://www.docker.com/products/docker-desktop
 
 Dans les préférences Docker Desktop, accédez à la section "Kubernetes" et activer Kubernetes.
 
+Vérifier que Kubernetes est bien installé avec la commande :
+
+```
+kubectl get nodes
+```
+
 En cas de problème :
 
 ```
