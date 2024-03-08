@@ -45,6 +45,8 @@ kubectl config view
 
 ## Installation de Lens
 
+Lens est un outil qui permet d'afficher la liste des objets déployés ainsi que d'obtenir de détails à partir d'une interface utilisateur. Ces mêmes informations peuvent être obtenues avec des commandes `kubectl`.
+
 Télécharger Lens depuis https://k8slens.dev/
 
 ## Création des objets
