@@ -272,7 +272,6 @@ Voici des explications sur le fichier de configuration Nginx :
 - `root /usr/share/nginx/html;` : spécifie le répertoire racine à partir duquel les fichiers statiques sont servis (/usr/share/nginx/html ici).
 - `index index.html;` : spécifie le fichier par défaut qui servi si l'URL demandée ne contient pas de nom de fichier spécifique.
 - `try_files $uri $uri/ /index.html;` : définit la stratégie de traitement des requêtes qui ne correspondent pas à un fichier spécifique. Cela indique à Nginx de d'abord essayer de servir le fichier demandé ($uri), puis de regarder si une réécriture de l'URL existe ($uri/), et enfin de servir le fichier index.html s'il ne trouve aucune correspondance.
-```
 
 On va maintenant builder l'application ReactJS :
 
